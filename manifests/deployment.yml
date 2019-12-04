@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: chejuropipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: chejuropipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: chejuropipelinesjavascriptdocker 
+          image: mycontainerregistryc.azurecr.io/chejuropipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
